@@ -9,4 +9,5 @@ export default {
   borderLight: '#E5E5E5',
   error: '#e3330b',
   disabled: '#ABABAB',
+  overlay: 'rgba(0,0,0,0.5)',
 };
