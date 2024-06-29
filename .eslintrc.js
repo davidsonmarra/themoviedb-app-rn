@@ -9,6 +9,6 @@ module.exports = {
     },
   ],
   rules: {
-    'testing-library/no-node-access': ['off', {allowContainerFirstChild: true}],
+    'testing-library/no-node-access': ['on', {allowContainerFirstChild: true}],
   },
 };
