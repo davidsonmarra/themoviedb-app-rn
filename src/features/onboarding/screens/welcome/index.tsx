@@ -1,9 +1,15 @@
 import React from 'react';
 import WelcomeContainer from './ui';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {GlobalRootStackParamList} from '../../../navigation';
 
-const WelcomeScreen = () => {
+type NavigationProps = NativeStackScreenProps<GlobalRootStackParamList>;
+
+interface Props extends NavigationProps {}
+
+const WelcomeScreen = ({navigation}: Props) => {
   const handlePressContinue = () => {
-    console.log('Continue button pressed');
+    navigation.navigate('Movies');
   };
 
   return <WelcomeContainer onPressContinue={handlePressContinue} />;
