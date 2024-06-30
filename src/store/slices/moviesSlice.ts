@@ -9,6 +9,9 @@ interface Props {
   loadingFetchGenres: boolean;
   error: Error | AxiosError;
   moviesData: MovieDTO[];
+  searchedMoviesData: MovieDTO[];
+  isEndSearch: boolean;
+  loadingFetchSearchMovies: boolean;
   genreList: GenreDTO[];
 }
 
@@ -18,6 +21,9 @@ const initialState: Props = {
   loadingFetchGenres: false,
   error: {} as Error | AxiosError,
   moviesData: [],
+  searchedMoviesData: [],
+  isEndSearch: true,
+  loadingFetchSearchMovies: false,
   genreList: [],
 };
 
@@ -63,6 +69,43 @@ const counterSlice = createSlice({
       loadingFetchMovies: false,
       error: payload,
     }),
+    FETCH_SEARCH_MOVIES: (
+      state: Props,
+      {payload}: PayloadAction<IFetchMovies>,
+    ) => ({
+      ...state,
+      loadingFetchSearchMovies: true,
+      isEndSearch: false,
+      error: {} as Error | AxiosError,
+    }),
+    FETCH_SEARCH_MOVIES_SUCCESS: (
+      state: Props,
+      {payload}: PayloadAction<MovieDTO[]>,
+    ) => {
+      const uniqueMovies = payload.filter(
+        newMovie =>
+          !state.searchedMoviesData.some(
+            existingMovie => existingMovie.id === newMovie.id,
+          ),
+      );
+
+      return {
+        ...state,
+        isEndSearch: payload?.length < 20,
+        loadingFetchSearchMovies: false,
+        error: {} as Error | AxiosError,
+        searchedMoviesData: state.searchedMoviesData.concat(uniqueMovies),
+      };
+    },
+    FETCH_SEARCH_MOVIES_ERROR: (
+      state: Props,
+      {payload}: PayloadAction<Error | AxiosError>,
+    ) => ({
+      ...state,
+      loadingFetchSearchMovies: false,
+      isEndSearch: true,
+      error: payload,
+    }),
     FETCH_GENRE_LIST: (state: Props) => ({
       ...state,
       loadingFetchGenres: true,
@@ -90,8 +133,15 @@ const counterSlice = createSlice({
       isEnd: false,
       loadingFetchMovies: false,
       error: {} as Error | AxiosError,
-      booksData: [],
-      category: {key: '', title: ''},
+      moviesData: [],
+      search: '',
+    }),
+    RESET_SEARCH_MOVIES: (state: Props) => ({
+      ...state,
+      isEndSearch: false,
+      loadingFetchSearchMovies: false,
+      error: {} as Error | AxiosError,
+      searchedMoviesData: [],
       search: '',
     }),
   },
@@ -106,6 +156,10 @@ export const {
   FETCH_GENRE_LIST,
   FETCH_GENRE_LIST_SUCCESS,
   FETCH_GENRE_LIST_ERROR,
+  FETCH_SEARCH_MOVIES,
+  FETCH_SEARCH_MOVIES_ERROR,
+  FETCH_SEARCH_MOVIES_SUCCESS,
   RESET_MOVIES,
+  RESET_SEARCH_MOVIES,
 } = actions;
 export default reducer;
