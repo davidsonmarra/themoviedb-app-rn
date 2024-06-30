@@ -44,6 +44,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.title,
   },
+  overlayTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: colors.buttonText,
+  },
+  overlayText: {
+    fontSize: 16,
+    color: colors.buttonText,
+  },
 });
 
 export default styles;

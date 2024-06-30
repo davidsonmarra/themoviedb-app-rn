@@ -64,3 +64,15 @@ export const Header: StoryObj<typeof Text> = {
     type: TextType.header,
   },
 };
+
+export const OverlayTitle: StoryObj<typeof Text> = {
+  args: {
+    type: TextType.overlayTitle,
+  },
+};
+
+export const OverlayText: StoryObj<typeof Text> = {
+  args: {
+    type: TextType.overlayText,
+  },
+};

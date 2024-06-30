@@ -11,6 +11,8 @@ export enum TextType {
   label = 'label',
   error = 'error',
   header = 'header',
+  overlayTitle = 'overlayTitle',
+  overlayText = 'overlayText',
 }
 
 interface Props extends TextProps {
@@ -26,6 +28,8 @@ const textStyle = {
   [TextType.label]: styles.label,
   [TextType.error]: styles.error,
   [TextType.header]: styles.header,
+  [TextType.overlayTitle]: styles.overlayTitle,
+  [TextType.overlayText]: styles.overlayText,
 };
 
 const Text = ({children, type, style}: Props) => {

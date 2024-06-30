@@ -66,4 +66,16 @@ describe('Text', () => {
     const text = screen.getByRole('text');
     expect(text.props.style[0]).toBe(styles.header);
   });
+
+  it('renders overlayTitle style correctly', () => {
+    renderComponent(TextType.overlayTitle);
+    const text = screen.getByRole('text');
+    expect(text.props.style[0]).toBe(styles.overlayTitle);
+  });
+
+  it('renders overlayText style correctly', () => {
+    renderComponent(TextType.overlayText);
+    const text = screen.getByRole('text');
+    expect(text.props.style[0]).toBe(styles.overlayText);
+  });
 });
