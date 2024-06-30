@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardMovie renders correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "borderColor": "#CCCCCC",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "marginBottom": 16,
+      "opacity": 1,
+    }
+  }
+>
+  <Image
+    source={
+      {
+        "uri": "https://image.tmdb.org/t/p/w188_and_h282_bestv2/7qOSKoOAPgemYhBwbJgBWcCxPWZ.jpg",
+      }
+    }
+    style={
+      {
+        "borderBottomLeftRadius": 8,
+        "borderTopLeftRadius": 8,
+        "height": 141,
+        "width": 94,
+      }
+    }
+  />
+  <View
+    style={
+      {
+        "flex": 1,
+        "padding": 12,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#121212",
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Movie Title
+    </Text>
+    <Text
+      style={
+        {
+          "color": "#808080",
+          "fontSize": 14,
+        }
+      }
+    >
+      31/12/2020
+    </Text>
+    <Text
+      numberOfLines={3}
+      style={
+        {
+          "color": "#222222",
+          "fontSize": 14,
+          "marginTop": 8,
+        }
+      }
+    >
+      Movie Overview
+    </Text>
+  </View>
+</View>
+`;

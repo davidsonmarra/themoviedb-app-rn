@@ -1,12 +1,12 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {AxiosError} from 'axios';
-import MoviesDTO from '../../@types/movies-dto';
+import MovieDTO from '../../@types/movies-dto';
 
 interface Props {
   isEnd: boolean;
   loadingFetchMovies: boolean;
   error: Error | AxiosError;
-  moviesData: MoviesDTO[];
+  moviesData: MovieDTO[];
 }
 
 const initialState: Props = {
@@ -33,14 +33,23 @@ const counterSlice = createSlice({
     }),
     FETCH_MOVIES_SUCCESS: (
       state: Props,
-      {payload}: PayloadAction<MoviesDTO[]>,
-    ) => ({
-      ...state,
-      isEnd: payload?.length < 15,
-      loadingFetchMovies: false,
-      error: {} as Error | AxiosError,
-      moviesData: state.moviesData.concat(payload),
-    }),
+      {payload}: PayloadAction<MovieDTO[]>,
+    ) => {
+      const uniqueMovies = payload.filter(
+        newMovie =>
+          !state.moviesData.some(
+            existingMovie => existingMovie.id === newMovie.id,
+          ),
+      );
+
+      return {
+        ...state,
+        isEnd: payload?.length < 20,
+        loadingFetchMovies: false,
+        error: {} as Error | AxiosError,
+        moviesData: state.moviesData.concat(uniqueMovies),
+      };
+    },
     FETCH_MOVIES_ERROR: (
       state: Props,
       {payload}: PayloadAction<Error | AxiosError>,

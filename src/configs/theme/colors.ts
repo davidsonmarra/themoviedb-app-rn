@@ -6,8 +6,9 @@ export default {
   text: '#222222',
   buttonText: '#FFFFFF',
   border: '#595959',
-  borderLight: '#E5E5E5',
+  borderLight: '#CCCCCC',
   error: '#e3330b',
   disabled: '#ABABAB',
   overlay: 'rgba(0,0,0,0.5)',
+  description: '#808080',
 };

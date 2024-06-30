@@ -1,1 +1,8 @@
-export default interface MoviesDTO {}
+export default interface MovieDTO {
+  id: number;
+  title: string;
+  overview: string;
+  backdrop_path: string;
+  poster_path: string;
+  release_date: string;
+}
