@@ -3,10 +3,11 @@ import {TouchableOpacity} from 'react-native';
 import Header, {Props} from '..';
 import {Text} from '../..';
 import {render, screen} from '@testing-library/react-native';
+import {SearchIcon} from '../../../assets/icons';
 
 const mockText = 'Snapshot test!';
-const createComponent = ({text = mockText, onBack}: Props) =>
-  render(<Header text={text} onBack={onBack} />);
+const createComponent = ({text = mockText, onBack, ...rest}: Props) =>
+  render(<Header text={text} onBack={onBack} {...rest} />);
 
 const mockGoBack = jest.fn();
 jest.mock('@react-navigation/native', () => ({
@@ -36,5 +37,16 @@ describe('Button', () => {
     const backIcon = instance.findAllByType(TouchableOpacity)[0];
     backIcon.props.onPress();
     expect(mockGoBack).toHaveBeenCalled();
+  });
+
+  it('should call rightIconAction when press right icon', () => {
+    const mockRightIconAction = jest.fn();
+    createComponent({
+      rightIcon: () => <SearchIcon />,
+      rightIconAction: mockRightIconAction,
+    });
+    const rightIcon = screen.getByTestId('right-buton-icon');
+    rightIcon.props.onClick();
+    expect(mockRightIconAction).toHaveBeenCalled();
   });
 });

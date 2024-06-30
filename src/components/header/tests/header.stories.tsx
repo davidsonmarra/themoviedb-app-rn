@@ -4,6 +4,7 @@ import type {Meta, StoryObj} from '@storybook/react';
 import {StorybookView} from '../..';
 import Header from '..';
 import {NavigationContainer} from '@react-navigation/native';
+import {SearchIcon} from '../../../assets/icons';
 
 const HeaderMeta: Meta<typeof Header> = {
   title: 'Components/Header',
@@ -34,5 +35,14 @@ export const Default: StoryObj<typeof Header> = {};
 export const WithoutLeftIcon: StoryObj<typeof Header> = {
   args: {
     showLeftIcon: false,
+  },
+};
+
+export const WithRightIcon: StoryObj<typeof Header> = {
+  args: {
+    rightIcon: () => <SearchIcon />,
+  },
+  argTypes: {
+    rightIconAction: {action: 'clicked'},
   },
 };

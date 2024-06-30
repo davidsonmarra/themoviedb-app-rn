@@ -9,9 +9,17 @@ export interface Props {
   text?: string;
   onBack?: () => void;
   showLeftIcon?: boolean;
+  rightIcon?: () => React.ReactNode;
+  rightIconAction?: () => void;
 }
 
-const Header = ({text, onBack, showLeftIcon = true}: Props) => {
+const Header = ({
+  text,
+  onBack,
+  showLeftIcon = true,
+  rightIcon,
+  rightIconAction = () => {},
+}: Props) => {
   const {goBack} = useNavigation();
   if (!onBack) {
     onBack = goBack;
@@ -32,7 +40,12 @@ const Header = ({text, onBack, showLeftIcon = true}: Props) => {
         </Text>
       )}
       <HorizontalSpacer width={12} />
-      <View style={styles.icon} />
+      <TouchableOpacity
+        onPress={rightIconAction}
+        style={styles.icon}
+        testID="right-buton-icon">
+        {rightIcon && rightIcon()}
+      </TouchableOpacity>
     </View>
   );
 };
