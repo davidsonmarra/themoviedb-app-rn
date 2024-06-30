@@ -1,19 +1,24 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {AxiosError} from 'axios';
 import MovieDTO from '../../@types/movies-dto';
+import GenreDTO from '../../@types/genre-dto';
 
 interface Props {
   isEnd: boolean;
   loadingFetchMovies: boolean;
+  loadingFetchGenres: boolean;
   error: Error | AxiosError;
   moviesData: MovieDTO[];
+  genreList: GenreDTO[];
 }
 
 const initialState: Props = {
   isEnd: true,
   loadingFetchMovies: false,
+  loadingFetchGenres: false,
   error: {} as Error | AxiosError,
   moviesData: [],
+  genreList: [],
 };
 
 export interface IFetchMovies {
@@ -58,6 +63,28 @@ const counterSlice = createSlice({
       loadingFetchMovies: false,
       error: payload,
     }),
+    FETCH_GENRE_LIST: (state: Props) => ({
+      ...state,
+      loadingFetchGenres: true,
+      error: {} as Error | AxiosError,
+    }),
+    FETCH_GENRE_LIST_SUCCESS: (
+      state: Props,
+      {payload}: PayloadAction<GenreDTO[]>,
+    ) => ({
+      ...state,
+      loadingFetchGenres: false,
+      error: {} as Error | AxiosError,
+      genreList: payload,
+    }),
+    FETCH_GENRE_LIST_ERROR: (
+      state: Props,
+      {payload}: PayloadAction<Error | AxiosError>,
+    ) => ({
+      ...state,
+      loadingFetchGenres: false,
+      error: payload,
+    }),
     RESET_MOVIES: (state: Props) => ({
       ...state,
       isEnd: false,
@@ -76,6 +103,9 @@ export const {
   FETCH_MOVIES,
   FETCH_MOVIES_SUCCESS,
   FETCH_MOVIES_ERROR,
+  FETCH_GENRE_LIST,
+  FETCH_GENRE_LIST_SUCCESS,
+  FETCH_GENRE_LIST_ERROR,
   RESET_MOVIES,
 } = actions;
 export default reducer;
