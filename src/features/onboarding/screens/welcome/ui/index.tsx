@@ -19,16 +19,16 @@ const WelcomeContainer = ({onPressContinue}: Props) => {
           style={styles.logoImage}
           resizeMode="cover"
         />
-        <View>
-          <Text type={TextType.buttonPrimary}>Seja bem vindo!</Text>
-          <Text type={TextType.buttonPrimary}>
+        <View style={styles.containerDescription}>
+          <Text type={TextType.overlayTitle}>Seja bem vindo!</Text>
+          <Text type={TextType.overlayText}>
             Este é um aplicativo de filmes, utilizando a API pública do TMDB.
           </Text>
         </View>
         <Button
-          testID="button-continue"
           text="Continuar"
           onPress={onPressContinue}
+          testID="button-continue"
         />
       </View>
     </ImageBackground>

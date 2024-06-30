@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     height: 86.33,
     marginHorizontal: 'auto',
   },
+  containerDescription: {
+    gap: 12,
+  },
 });
 
 export default styles;
