@@ -43,21 +43,21 @@ exports[`WelcomeContainer should render correctly 1`] = `
       }
     }
   >
-    <Text
-      style={
-        [
-          {
-            "color": "#FFFFFF",
-            "fontSize": 18,
-            "fontWeight": "bold",
-            "padding": 8,
-          },
-          undefined,
-        ]
+    <Image
+      resizeMode="cover"
+      source={
+        {
+          "testUri": "../../../src/assets/logo-the-movie-db.png",
+        }
       }
-    >
-      IMDB
-    </Text>
+      style={
+        {
+          "height": 86.33,
+          "marginHorizontal": "auto",
+          "width": 120,
+        }
+      }
+    />
     <View>
       <Text
         style={

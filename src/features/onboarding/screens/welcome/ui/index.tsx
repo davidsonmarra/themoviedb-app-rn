@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageBackground, View} from 'react-native';
+import {Image, ImageBackground, View} from 'react-native';
 import styles from './styles';
 import Text, {TextType} from '../../../../../components/text';
 import Button from '../../../../../components/button';
@@ -11,10 +11,14 @@ interface Props {
 const WelcomeContainer = ({onPressContinue}: Props) => {
   return (
     <ImageBackground
-      style={styles.container}
-      source={require('../../../../../assets/poster-avengers.jpg')}>
+      source={require('../../../../../assets/poster-avengers.jpg')}
+      style={styles.container}>
       <View style={styles.overlay}>
-        <Text type={TextType.buttonPrimary}>IMDB</Text>
+        <Image
+          source={require('../../../../../assets/logo-the-movie-db.png')}
+          style={styles.logoImage}
+          resizeMode="cover"
+        />
         <View>
           <Text type={TextType.buttonPrimary}>Seja bem vindo!</Text>
           <Text type={TextType.buttonPrimary}>
