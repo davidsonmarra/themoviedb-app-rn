@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "borderColor": "#e3330b",
+      "borderRadius": 32,
+      "borderWidth": 5,
+      "flexDirection": "row",
+      "height": 64,
+      "justifyContent": "center",
+      "width": 64,
+    }
+  }
+  testID="average-container"
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#121212",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        },
+        {
+          "color": "#e3330b",
+          "fontSize": 28,
+        },
+      ]
+    }
+    testID="average-text"
+  >
+    3.0
+  </Text>
+</View>
+`;

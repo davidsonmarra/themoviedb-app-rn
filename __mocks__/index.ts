@@ -7,6 +7,8 @@ export const mockCardMovie: MovieDTO = {
   poster_path: '7qOSKoOAPgemYhBwbJgBWcCxPWZ.jpg',
   release_date: '2021-01-01',
   backdrop_path: 'path/to/image',
+  vote_average: 10,
+  genre_ids: [1, 2],
 };
 
 export const mockListMovie: MovieDTO[] = [
@@ -17,6 +19,8 @@ export const mockListMovie: MovieDTO[] = [
     poster_path: 'path/to/image',
     release_date: '2021-01-01',
     backdrop_path: 'path/to/image',
+    vote_average: 10,
+    genre_ids: [1, 2],
   },
   {
     id: 2,
@@ -25,5 +29,7 @@ export const mockListMovie: MovieDTO[] = [
     poster_path: 'path/to/image',
     release_date: '2021-01-01',
     backdrop_path: 'path/to/image',
+    vote_average: 9,
+    genre_ids: [1, 2],
   },
 ];

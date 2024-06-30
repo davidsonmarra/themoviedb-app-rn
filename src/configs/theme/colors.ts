@@ -8,7 +8,10 @@ export default {
   border: '#595959',
   borderLight: '#CCCCCC',
   error: '#e3330b',
+  success: '#00C851',
+  warning: '#FFBB33',
   disabled: '#ABABAB',
   overlay: 'rgba(0,0,0,0.5)',
+  overlayDark: 'rgba(0,0,0,0.75)',
   description: '#808080',
 };

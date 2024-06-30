@@ -32,8 +32,12 @@ const textStyle = {
   [TextType.overlayText]: styles.overlayText,
 };
 
-const Text = ({children, type, style}: Props) => {
-  return <RNText style={[textStyle[type], style]}>{children}</RNText>;
+const Text = ({children, type, style, ...rest}: Props) => {
+  return (
+    <RNText style={[textStyle[type], style]} {...rest}>
+      {children}
+    </RNText>
+  );
 };
 
 export default Text;
