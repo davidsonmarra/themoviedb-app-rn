@@ -43,7 +43,7 @@ exports[`CardMovie renders correctly 1`] = `
   <Image
     source={
       {
-        "uri": "https://image.tmdb.org/t/p/w188_and_h282_bestv2/7qOSKoOAPgemYhBwbJgBWcCxPWZ.jpg",
+        "uri": "https://image.tmdb.org/t/p/w188_and_h282_bestv2/https://image.tmdb.org/t/p/w188_and_h282_bestv2/wNAhuOZ3Zf84jCIlrcI6JhgmY5q.jpg",
       }
     }
     style={
