@@ -12,7 +12,7 @@
  <a href="#libs">Bibliotecas Utilizadas</a> • 
  <a href="#resultado">Resultado</a> • 
  <a href="#doc">Documentação</a> • 
- <a href="#tests">Cobertura de Testes</a> • 
+ <a href="#tests">Testes</a> • 
  <a href="#autor">Autor</a>
 </p>
 
@@ -73,7 +73,7 @@ corretamente.
 Essa é uma forma de executar o aplicativo — você também pode executá-lo diretamente do Android
 Studio e Xcode, respectivamente.
 
-<h2 id="executar">📁 Organização de Diretórios</h2>
+<h2 id="dir">📁 Organização de Diretórios</h2>
 
     .
     ├── ...
@@ -109,20 +109,25 @@ Studio e Xcode, respectivamente.
 <h2 id="resultado">📱 Resultado</h2>
 <div align="center">
 
+https://github.com/davidsonmarra/themoviedb-app-rn/assets/80720221/56c28491-902e-4b94-a989-ee0b750971c2
+
+
 </div>
 
 <h2 id='doc'>📖 Documentação</h2>
 <p>
-  
-  Toda a documentação foi desenvolvida com o Storybook.
-  
+  Toda a documentação foi desenvolvida com o Storybook.  
 </p>
 <div align="center">
+  
+https://github.com/davidsonmarra/themoviedb-app-rn/assets/80720221/5a149006-6055-4cb9-a7b5-6a7e6c6f3819
 
 </div>
 
-<h2 id='tests'>⚙️ Cobertura de Testes<h2>
-<div align="center">
+<h2 id='tests'>⚙️ Cobertura de Testes</h2>
+<div>
+
+Utilizei de TDD para garantir que a maior parte da minha aplicação fosse testável, e isso pode ser evidenciado nos commits. Todos os componentes e features só subiram mediante testes.
 
 </div>
 
