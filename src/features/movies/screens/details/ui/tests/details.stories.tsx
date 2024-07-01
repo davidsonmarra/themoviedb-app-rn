@@ -1,9 +1,8 @@
 import React from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
+import {NavigationContainer} from '@react-navigation/native';
 import DetailsContainer from '..';
 import {mockCardMovie} from '../../../../../../../__mocks__';
-import {NavigationContainer} from '@react-navigation/native';
 
 const DetailsContainerMeta: Meta<typeof DetailsContainer> = {
   title: 'Screens/Movies/Details',
