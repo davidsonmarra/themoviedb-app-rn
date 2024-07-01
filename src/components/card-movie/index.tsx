@@ -13,7 +13,8 @@ const CardMovieComponent = ({movie, onPressCard}: Props) => {
   return (
     <TouchableOpacity
       onPress={() => onPressCard(movie)}
-      style={styles.container}>
+      style={styles.container}
+      testID="movie-card">
       <Image
         source={{
           uri: `https://image.tmdb.org/t/p/w188_and_h282_bestv2/${movie.poster_path}`,

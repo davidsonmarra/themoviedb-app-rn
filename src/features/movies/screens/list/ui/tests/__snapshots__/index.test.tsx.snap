@@ -270,9 +270,12 @@ exports[`ListContainer should render correctly 1`] = `
       <View
         onLayout={[Function]}
       >
-        <ActivityIndicator
-          color="#01B4A4"
-          size="large"
+        <View
+          style={
+            {
+              "height": 100,
+            }
+          }
         />
       </View>
     </View>

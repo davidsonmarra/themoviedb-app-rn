@@ -39,6 +39,7 @@ exports[`CardMovie renders correctly 1`] = `
       "opacity": 1,
     }
   }
+  testID="movie-card"
 >
   <Image
     source={
