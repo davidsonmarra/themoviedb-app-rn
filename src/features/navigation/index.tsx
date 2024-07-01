@@ -14,8 +14,8 @@ const {Navigator, Screen} =
 const Navigation = () => {
   return (
     <Navigator screenOptions={{headerShown: false}}>
-      <Screen name="Movies" component={MoviesStack} />
       <Screen name="Onboarding" component={WelcomeStack} />
+      <Screen name="Movies" component={MoviesStack} />
     </Navigator>
   );
 };
