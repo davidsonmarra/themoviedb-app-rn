@@ -1,79 +1,141 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-# Getting Started
+<div align="center">
+  <img align="center" alt="Logo do app" src="./src/assets/logo-the-movie-db.png" width=150>
+</div>
+<h4 align="center">Um app de filmes, venha conhecer mais!</h4>
+<p align="center">
+ <a href="#sobre">Sobre</a> •
+ <a href="#executar">Como executar</a> • 
+ <a href="#dir">Organização de Diretórios</a> • 
+ <a href="#libs">Bibliotecas Utilizadas</a> • 
+ <a href="#resultado">Resultado</a> • 
+ <a href="#doc">Documentação</a> • 
+ <a href="#tests">Cobertura de Testes</a> • 
+ <a href="#autor">Autor</a>
+</p>
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+<h2 id="sobre">🧾 Sobre</h2>
+<p>Este projeto foi desenvolvido em React Native como solução de um desafio técnico! 👨‍💻</p>
+<p>Essa é uma aplicação de listagem de filmes, onde temos três telas principais: a de listagem, de detalhes e a de pesquisa. Além disso, o aplicativo possui documentação com o storybook e cobertura de testes.</p>
 
-## Step 1: Start the Metro Server
+<h2 id="executar">💻 Como executar</h2>
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+> **Nota**: Certifique-se de ter concluído as instruções de
+> [Configuração do Ambiente do React Native](https://reactnative.dev/docs/environment-setup) até a
+> etapa "Criando um novo aplicativo", antes de prosseguir.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+<h3>Passo 1: Iniciando o Metro Server</h3>
+
+Primeiro, você precisará iniciar o **Metro**, o _bundler_ JavaScript que acompanha o React Native.
+
+Para iniciar o Metro, execute o seguinte comando a partir da raiz do seu projeto React Native:
 
 ```bash
-# using npm
+# usando npm
 npm start
 
-# OR using Yarn
+# OU usando Yarn
 yarn start
 ```
 
-## Step 2: Start your Application
+<h3>Passo 2: Iniciando aplicação</h3>
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Deixe o Metro Bundler rodando em _seu próprio_ terminal. Abra um _novo_ terminal a partir da raiz do
+seu projeto React Native. Execute o seguinte comando para iniciar o seu aplicativo _Android_ ou
+_iOS_:
 
-### For Android
+<h4>Para Android</h4>
 
 ```bash
-# using npm
+# usando npm
 npm run android
 
-# OR using Yarn
+# OU usando Yarn
 yarn android
 ```
 
-### For iOS
+<h4>Para iOS</h4>
 
 ```bash
-# using npm
+# usando npm
 npm run ios
 
-# OR using Yarn
+# OR usando Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Se tudo estiver configurado corretamente, em breve você deverá ver o aplicativo rodando no seu
+Emulador Android ou Simulador iOS, desde que você tenha configurado o emulador/simulador
+corretamente.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Essa é uma forma de executar o aplicativo — você também pode executá-lo diretamente do Android
+Studio e Xcode, respectivamente.
 
-## Step 3: Modifying your App
+<h2 id="executar">📁 Organização de Diretórios</h2>
 
-Now that you have successfully run the app, let's modify it.
+    .
+    ├── ...
+    ├── __tests__ # Configurações de teste
+    ├── __mocks__ # Arquivos de mock
+    ├── src # Código fontes JavaScript
+    │   └── @types # Definições dos tipos usados no projeto
+    │   └── assets # Assets da aplicação
+    │   └── components # Componentes genéricos da aplicação
+    │   └── configs # Configurações globais
+    |       └── theme # Tema do app
+    |       └── jest.setup # Configurações de teste
+    │   └── constants # Constantes do app
+    │   └── features # Cada feature do app
+    │   └── services # Configuração da api
+    |   └── store # Gerenciamento de estado global
+    |       └── sagas # Sagas do redux
+    |       └── slices # Slices do redux
+    └── ...
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+<h2 id="libs">📚 Bibliotecas Utilizadas</h2>
+<p>As principais bibliotecas externas utilizadas nesse projeto foram:</p>
+<ul>
+  <li>React Navigation: para a criação da navegação e das rotas presentes no aplicativo.</li>
+  <li>React Native Vector Icons: usada para a criação dos ícones do aplicativo.</li>
+  <li>ESLint: para manter a formatação de código padrão.</li>
+  <li>Prettier: para formatar o código. Trabalha em conjunto com o ESlint para manter a formatação.</li>
+  <li>Jest e React Native Testing Library: para a criação de testes unitários.</li>
+  <li>Storybook: para a documentação dos principais componentes do projeto.</li>
+  <li>Axios: para a realização da integração com as APIs.</li>
+</ul>
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+<h2 id="resultado">📱 Resultado</h2>
+<div align="center">
 
-## Congratulations! :tada:
+</div>
 
-You've successfully run and modified your React Native App. :partying_face:
+<h2 id='doc'>📖 Documentação</h2>
+<p>
+  
+  Toda a documentação foi desenvolvida com o Storybook.
+  
+</p>
+<div align="center">
 
-### Now what?
+</div>
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+<h2 id='tests'>⚙️ Cobertura de Testes<h2>
+<div align="center">
 
-# Troubleshooting
+</div>
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+<h2 id="autor">👨‍💻 Autor</h2>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/davidsonmarra">
+        <img src="https://github.com/davidsonmarra.png?size=100" width="100px;" alt="Davidson Marra"/><br>
+        <sub>
+          <b>Davidson Marra</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
